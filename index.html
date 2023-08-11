@@ -1,0 +1,46 @@
+<!DOCTYPE html> <html><head>
+        <title>Summer Tech Name Generator -- DEMO</title>
+    <style>body {
+    font-family: Arial;
+    background-color: #6495ED;
+}
+
+h1 {
+    color: #FDDA0D;
+}
+
+.result {
+    color: #FDDA0D;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+img {
+    width: 500px;
+    margin: 20px 0px;
+    border: 5px solid #FDDA0D;
+}</style></head>
+    <body>
+        <h1>What is your Superhero name?</h1>
+        <p>Enter your name:</p>
+        <input class="name" placeholder="Name?">
+        <p class="question-text"></p>
+        <input class="favNum" placeholder="Number?">
+        <button>Find your name</button>
+        <div class="result"></div>
+        <img src="https://www.comicbasics.com/wp-content/uploads/2020/08/The-Top-10-Greatest-Superheroes-Without-Superpowers-In-Comics-Today.jpg">
+    
+<script>
+/*__POPCODESTART__*/
+var nameArray = ["Super", "Wonder", "The Great", "Amazing", "Strong", "Powerful", "Hulking", "Intelligent"];
+var arrayLength = nameArray.length;
+document.querySelector(".question-text").innerHTML = "What is your favorite number from 0 to " + (arrayLength - 1);
+var button = document.querySelector("button");
+
+button.onclick = function () {
+  var name = document.querySelector(".name").value;
+  var favNum = document.querySelector(".favNum").value;
+  var resultDisplay = document.querySelector(".result");
+  resultDisplay.innerHTML = "Your superhero name is " + nameArray[favNum] + " " + name + "!";
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbIm5hbWVBcnJheSIsImFycmF5TGVuZ3RoIiwibGVuZ3RoIiwiZG9jdW1lbnQiLCJxdWVyeVNlbGVjdG9yIiwiaW5uZXJIVE1MIiwiYnV0dG9uIiwib25jbGljayIsIm5hbWUiLCJ2YWx1ZSIsImZhdk51bSIsInJlc3VsdERpc3BsYXkiXSwibWFwcGluZ3MiOiJBQUFBLElBQUlBLFNBQVMsR0FBRyxDQUFDLE9BQUQsRUFBVSxRQUFWLEVBQW9CLFdBQXBCLEVBQWlDLFNBQWpDLEVBQTRDLFFBQTVDLEVBQXNELFVBQXRELEVBQWtFLFNBQWxFLEVBQTZFLGFBQTdFLENBQWhCO0FBQ0EsSUFBSUMsV0FBVyxHQUFHRCxTQUFTLENBQUNFLE1BQTVCO0FBRUFDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixnQkFBdkIsRUFBeUNDLFNBQXpDLEdBQXFELDZDQUE2Q0osV0FBVyxHQUFDLENBQXpELENBQXJEO0FBRUEsSUFBSUssTUFBTSxHQUFHSCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsUUFBdkIsQ0FBYjs7QUFFQUUsTUFBTSxDQUFDQyxPQUFQLEdBQWlCLFlBQVc7QUFDM0IsTUFBSUMsSUFBSSxHQUFHTCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsT0FBdkIsRUFBZ0NLLEtBQTNDO0FBQ0csTUFBSUMsTUFBTSxHQUFHUCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsRUFBa0NLLEtBQS9DO0FBQ0EsTUFBSUUsYUFBYSxHQUFHUixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsQ0FBcEI7QUFDQU8sRUFBQUEsYUFBYSxDQUFDTixTQUFkLEdBQTBCLDRCQUEyQkwsU0FBUyxDQUFDVSxNQUFELENBQXBDLEdBQThDLEdBQTlDLEdBQW1ERixJQUFuRCxHQUF5RCxHQUFuRjtBQUNILENBTEQiLCJzb3VyY2VzQ29udGVudCI6WyJsZXQgbmFtZUFycmF5ID0gW1wiU3VwZXJcIiwgXCJXb25kZXJcIiwgXCJUaGUgR3JlYXRcIiwgXCJBbWF6aW5nXCIsIFwiU3Ryb25nXCIsIFwiUG93ZXJmdWxcIiwgXCJIdWxraW5nXCIsIFwiSW50ZWxsaWdlbnRcIl07XG5sZXQgYXJyYXlMZW5ndGggPSBuYW1lQXJyYXkubGVuZ3RoO1xuXG5kb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnF1ZXN0aW9uLXRleHRcIikuaW5uZXJIVE1MID0gXCJXaGF0IGlzIHlvdXIgZmF2b3JpdGUgbnVtYmVyIGZyb20gMCB0byBcIiArIChhcnJheUxlbmd0aC0xKTtcblxubGV0IGJ1dHRvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCJidXR0b25cIik7XG5cbmJ1dHRvbi5vbmNsaWNrID0gZnVuY3Rpb24oKSB7XG5cdGxldCBuYW1lID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5uYW1lXCIpLnZhbHVlO1xuICAgIGxldCBmYXZOdW0gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmZhdk51bVwiKS52YWx1ZTtcbiAgICBsZXQgcmVzdWx0RGlzcGxheSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmVzdWx0XCIpO1xuICAgIHJlc3VsdERpc3BsYXkuaW5uZXJIVE1MID0gXCJZb3VyIHN1cGVyaGVybyBuYW1lIGlzIFwiKyBuYW1lQXJyYXlbZmF2TnVtXSArXCIgXCIrIG5hbWUrIFwiIVwiO1xufTsiXX0=</script></body></html>
