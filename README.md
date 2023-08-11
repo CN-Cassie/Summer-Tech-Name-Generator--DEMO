@@ -1,1 +1,0 @@
-# Summer-Tech-Name-Generator--DEMO
